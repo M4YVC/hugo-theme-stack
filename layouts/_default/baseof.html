@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}">
     <head>
+        <title>{{ block "title" . }}{{ .Title }}{{ with .Section}}  - {{end}}{{ .Site.Title }}{{ end }}</title>
         {{- partial "head/head.html" . -}}
         {{- block "head" . -}}{{ end }}
     </head>
